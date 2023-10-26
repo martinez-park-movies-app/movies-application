@@ -33,11 +33,15 @@ div#addCardFormWrapper {
 div.hideForm {
     opacity: 0;
     max-height: 0;
+    z-index: 5;
+    /*display: none;*/
 }
 
 div.showForm {
     opacity: 1;
     max-height: 500px;
+    z-index: 15;
+    /*display: inline-block;*/
 }
 
 fieldset {
@@ -62,16 +66,17 @@ fieldset textarea {
     resize: none;
 }
 
-#gizmos {
+#movies {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
     gap: 10px;
     margin-top: 20px;
+    z-index: 10;
 }
 
-.gizmo {
+.movie {
     flex-basis: calc(30% - 20px);
     display: flex;
     flex-flow: column nowrap;
@@ -83,12 +88,12 @@ fieldset textarea {
     background-color: rgba(102, 99, 99, 0.73);
 }
 
-.gizmo img {
+.movie img {
     max-width: 100%;
     max-height: 38%;
 }
 
-.gizmo p {
+.movie p {
     margin-top: auto;
     padding: 0 10px;
 }
@@ -115,7 +120,7 @@ header button {
     padding: 0 15px;
 }
 
-.gizmo button {
+.movie button {
     margin-top: auto;
     width: 30%;
     padding: 7px 0;
@@ -135,7 +140,7 @@ header button {
     backdrop-filter: blur(0px);
     transition: all ease .5s;
     opacity: 1;
-    z-index: 2;
+    z-index: 15;
 }
 
 #editCardForm {
@@ -164,17 +169,17 @@ header button {
 }
 
 @media  screen and (max-width: 768px) {
-    #gizmos {
+    #moviesList {
         width: 90%;
     }
 
-    .gizmo {
+    .movie {
         flex-basis:  calc(50% - 10px);
     }
 }
 
 @media screen and (max-width: 490px) {
-    #gizmos {
+    #moviesList {
         flex-flow: column nowrap;
         width: 90%;
     }

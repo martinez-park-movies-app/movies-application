@@ -1,4 +1,4 @@
-const gizmoList = [
+const moviesList = [
     {
         id: 1,
         title: "Fly Eagles Fly",
@@ -35,7 +35,7 @@ const gizmoList = [
 
 function generateCard(movieObject){
     const newCard = document.createElement("div");
-    newCard.classList.add('gizmo');
+    newCard.classList.add('movie');
     newCard.dataset.id = movieObject.id;
 
     const newCardH2El = document.createElement("h2");
@@ -73,7 +73,7 @@ const editCardSubmitButton = document.querySelector("#editCardForm").querySelect
 
 const removeButtons = document.querySelectorAll("button.remove");
 
-const gizmosDiv = document.querySelector("#gizmos");
+const moviesDiv = document.querySelector("#movies");
 
 
 addCardButton.addEventListener('click', () => {
@@ -87,7 +87,7 @@ addCardSubmitButton.addEventListener('click', event => {
 
     const newCardObject = {
         // using a global variable inside a function is questionable
-        id: gizmosDiv.children.length + 1,
+        id: moviesDiv.children.length + 1,
         title: document.querySelector("#title").value,
         imgSrc: document.querySelector("#image").value,
         imgAlt: document.querySelector("#title").value,
@@ -95,7 +95,7 @@ addCardSubmitButton.addEventListener('click', event => {
     }
 
     // Add the new elements to the page
-    document.querySelector("#gizmos").appendChild(generateCard(newCardObject));
+    document.querySelector("#movies").appendChild(generateCard(newCardObject));
     addCardButton.click();
 });
 
@@ -159,4 +159,4 @@ removeButtons.forEach(removeButton => {
     removeButton.addEventListener('click', handleRemoveButtonClick);
 });
 
-gizmoList.forEach(gizmo => gizmosDiv.appendChild(generateCard(gizmo)));
+moviesList.forEach(movie => moviesDiv.appendChild(generateCard(movie)));
