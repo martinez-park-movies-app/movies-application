@@ -1,3 +1,8 @@
+import * as movie from "./movies-app-api";
+import {getMoviesAndCreateCards} from "./movies-app-api";
+
+getMoviesAndCreateCards()
+
 const moviesList = [
     {
         id: 1,
@@ -174,3 +179,5 @@ document.onreadystatechange = function () {
         }, 3000)
     }
 };
+
+//Make an AJAX request to get a listing of all the movies
