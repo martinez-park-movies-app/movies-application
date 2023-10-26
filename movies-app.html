@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies APP</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="css/movies-app.css">
+</head>
+<body>
+<div id="all-content">
+    <header>
+        <h1>Adding and Removing Elements</h1>
+        <button>Add Movie!</button>
+    </header>
+    <div id="addCardFormWrapper" class="hideForm">
+        <form>
+            <fieldset>
+                <legend>Add a Card:</legend>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title">
+                <label for="image">Image Link:</label>
+                <input type="text" name="image" id="image">
+                <label for="description">Description:</label>
+                <textarea name="description" id="description"></textarea>
+                <button>Add Card</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <!--    THE BELOW DIV OF gizmos IS EMPTY, AND INSTEAD STORED IN AN ARRAY OBJECT INSIDE THE JS FILE-->
+    <div id="gizmos">
+
+    </div>
+    <div id="editCardModalWrapper" class="hideModal">
+        <form id="editCardForm">
+            <fieldset>
+                <legend>Edit Card:</legend>
+                <label for="editCardTitle">Title:</label>
+                <input type="text" id="editCardTitle">
+                <label for="editImageLink">Image Link:</label>
+                <input type="text" id="editImageLink">
+                <label for="editImageDescription">Description:</label>
+                <textarea id="editImageDescription"></textarea>
+                <input type="hidden" id="editCardId" value="">
+                <button>Edit Card</button>
+            </fieldset>
+        </form>
+
+    </div>
+</div>
+<script src="js/keys.js"></script>
+<script type="module" src="js/movies-app-api.js"></script>
+</body>
+</html>
