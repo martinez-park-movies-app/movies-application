@@ -1,9 +1,80 @@
 {
   "movies": [
     {
+      "title": "Blade Runner",
+      "rating": 5,
+      "genre": "Science-fiction action",
+      "movieSummary": "A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.",
       "id": 1,
-      "title": "Shrek",
-      "rating": 5
+      "posterURL": "https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Misery",
+      "director": "Rob Reiner",
+      "released": 1990,
+      "rating": 4,
+      "genre": "Thriller",
+      "movieSummary": "After a famous author is rescued from a car crash by a fan of his novels, he comes to realize that the care he is receiving is only the beginning of a nightmare of captivity and abuse.",
+      "posterURL": "https://m.media-amazon.com/images/M/MV5BNzY0ODQ3MTMxN15BMl5BanBnXkFtZTgwMDkwNTg4NjE@._V1_SX300.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Dawn of the Dead",
+      "director": "George Romero",
+      "released": 1978,
+      "rating": 3,
+      "genre": "Horror",
+      "movieSummary": "During an escalating zombie epidemic, two Philadelphia SWAT team members, a traffic reporter and his TV executive girlfriend seek refuge in a secluded shopping mall.",
+      "posterURL": "https://m.media-amazon.com/images/M/MV5BN2M2ZmU2OGQtNmU5Yi00MTIyLTgwNWMtYjljMzZlYTdiNjBhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
+    },
+    {
+      "title": "Fletch",
+      "rating": 4,
+      "genre": "Comedy",
+      "movieSummary": "Irwin M. \"Fletch\" Fletcher is a newspaper reporter being offered a large sum to off a cancerous millionaire, but is on the run, risking his job and finding clues when it's clear the man is healthy.",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "title": "The Dark Knight",
+      "director": "Christopher Nolan",
+      "released": 2008,
+      "rating": 4,
+      "genre": "Action",
+      "movieSummary": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "posterURL": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
+    },
+    {
+      "title": "Phantasm",
+      "rating": 5,
+      "genre": "Horror",
+      "movieSummary": "Super awesome!",
+      "id": 8,
+      "posterURL": "https://m.media-amazon.com/images/M/MV5BZTdmN2RkODEtODM4ZS00ZGRlLTliMTYtYmZmZWZkMTZmODYxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      "title": "Fellowship of the Ring",
+      "rating": 3,
+      "genre": "fantasy",
+      "movieSummary": "way too long but Aragorn's pretty cool!",
+      "id": 9,
+      "posterURL": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
+    },
+    {
+      "title": "The Shining",
+      "rating": 5,
+      "movieSummary": "Jack Nicholson hitting his peak.",
+      "posterURL": "https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "id": 10
+    },
+    {
+      "title": "The Two Towers",
+      "rating": 3,
+      "genre": "fantasy",
+      "movieSummary": "eh, ok. soundtrack is good.",
+      "posterURL": "https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+      "id": 11
     }
   ]
 }
