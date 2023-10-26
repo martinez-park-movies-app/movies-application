@@ -159,4 +159,13 @@ removeButtons.forEach(removeButton => {
     removeButton.addEventListener('click', handleRemoveButtonClick);
 });
 
-moviesList.forEach(movie => moviesDiv.appendChild(generateCard(movie)));
+
+
+//Display a "loading..." message
+document.onreadystatechange = function () {
+    if (document.readyState !== "complete") {
+
+    } else {
+
+    }
+};
