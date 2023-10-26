@@ -27,17 +27,35 @@ import * as modalLecture from "./movies-app-main.js";
 
 
 //Make an AJAX request to get a listing of all the movies
-export function getMoviesAndCreateCards (movie) {
+// export function getMoviesAndCreateCards (movie) {
+//     fetch("http://localhost:3000/movies")
+//         .then(data => {
+//            return data.json();
+//         })
+//         .then(movie => {
+//             // createMovieList(movie.list);
+//             console.log(movie);
+//         })
+//
+// }
+
+export function getMoviesAndCreateCards (movies) {
     fetch("http://localhost:3000/movies")
         .then(data => {
-           return data.json();
+            return data.json();
         })
-        .then(movie => {
+        .then(movies => {
             // createMovieList(movie.list);
-            console.log(movie);
-
+        movies.forEach((movie, index) => {
+            // const movieTitle = movie.title;
+            // const movieGenre = movie.genre;
+            // const movieRating = movie.rating;
+            // const movieSummary = movie.movieSummary;
+            // console.log(movieGenre);
+            })
         })
 
 }
+ const movieTitle = getMoviesAndCreateCards(movie.title);
+console.log(movieTitle);
 
-// console.log(getMoviesAndCreateCards());

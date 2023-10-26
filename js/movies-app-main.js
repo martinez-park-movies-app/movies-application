@@ -1,9 +1,12 @@
-import * as movie from "./movies-app-api";
-import {getMoviesAndCreateCards} from "./movies-app-api";
+// import * as movie from "./movies-app-api";
+// import {getMoviesAndCreateCards} from "./movies-app-api";
+//
+// function moviesLoop () {
+//     getMoviesAndCreateCards()
+// }
 
-getMoviesAndCreateCards()
-
-const moviesList = [
+const moviesList =
+    [
     {
         id: 1,
         title: "Fly Eagles Fly",
