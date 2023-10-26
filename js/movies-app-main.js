@@ -160,3 +160,13 @@ removeButtons.forEach(removeButton => {
 });
 
 gizmoList.forEach(gizmo => gizmosDiv.appendChild(generateCard(gizmo)));
+
+
+//Display a "loading..." message
+document.onreadystatechange = function () {
+    if (document.readyState !== "complete") {
+
+    } else {
+
+    }
+};

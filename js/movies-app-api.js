@@ -1,3 +1,5 @@
+"use strict";
+
 import * as modalLecture from "./movies-app-main.js";
 
 export async function getMoviePoster(movie) {
@@ -11,3 +13,14 @@ export async function getMoviePoster(movie) {
 }
 
 getMoviePoster({title:"shrek"});
+
+
+fetch ("http://localhost:3000/movies")
+    .then( response => {
+        return response.json();
+    })
+    .then( data => {
+        console.log(data);
+    })
+
+    // Display a "loading..." message
