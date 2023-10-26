@@ -159,13 +159,18 @@ removeButtons.forEach(removeButton => {
     removeButton.addEventListener('click', handleRemoveButtonClick);
 });
 
+moviesList.forEach(movie => moviesDiv.appendChild(generateCard(movies)));
 
 
 //Display a "loading..." message
 document.onreadystatechange = function () {
     if (document.readyState !== "complete") {
-
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loadingIndicator").style.visibility = "visible";
     } else {
-
+        setTimeout(() => {
+            document.querySelector("#loadingIndicator").style.display = "none";
+            document.querySelector("body").style.visibility = "visible";
+        }, 3000)
     }
 };
