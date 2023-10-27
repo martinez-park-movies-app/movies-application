@@ -5,7 +5,6 @@
 //     getMoviesAndCreateCards()
 // }
 
-
 function getMoviesAndCreateCards (movies) {
     fetch("http://localhost:3000/movies")
         .then(data => {
@@ -15,6 +14,7 @@ function getMoviesAndCreateCards (movies) {
             loopingThroughMovies(movies);
         })
 }
+
 function loopingThroughMovies(movies) {
     // let moviesDiv = document.querySelector("#movies")
     movies.forEach((movie, index) => {
@@ -32,23 +32,31 @@ function createMovieCards(movies, index) {
     console.log(movieTitle);
 }
 getMoviesAndCreateCards();
-function generateCard(movieObject){
+function generateCard(movie){
     const newCard = document.createElement("div");
     newCard.classList.add('movie');
-    newCard.dataset.id = movieObject.id;
-
-    const newCardH2El = document.createElement("h2");
-    newCardH2El.innerText = movieObject.title;
-    newCard.appendChild(newCardH2El);
+    newCard.dataset.id = movie.id;
 
     const newCardImgEl = document.createElement("img");
-    newCardImgEl.src = movieObject.imgSrc;
-    newCardImgEl.alt = movieObject.imgAlt;
+    newCardImgEl.src = movie.imgSrc;
+    newCardImgEl.alt = movie.imgAlt;
     newCard.appendChild(newCardImgEl);
 
-    const newCardP = document.createElement("p");
-    newCardP.innerText = movieObject.description;
-    newCard.appendChild(newCardP);
+    const movieTitle = document.createElement("h2");
+    movieTitle.innerHTML = movie.title;
+    newCard.appendChild(movieTitle);
+
+
+
+    const movieGenre = document.createElement("p");
+    movieGenre.innerHTML = `<span class="genre"> Genre: </span> ` + movie.genre;
+    newCard.appendChild(movieGenre);
+    const movieRating = document.createElement("p");
+    movieRating.innerHTML = `<span class="rating"> Rating: </span> ` + movie.rating;
+    newCard.appendChild(movieRating);
+    const movieSummary = document.createElement("p");
+    movieSummary.innerHTML = `<span class="summary"> Summary: </span> ` + (movie.movieSummary);
+    newCard.appendChild(movieSummary);
 
     const newCardEditButton = document.createElement("button");
     newCardEditButton.innerText = "Edit";
@@ -83,21 +91,20 @@ addCardButton.addEventListener('click', () => {
 addCardSubmitButton.addEventListener('click', event => {
     // very important !!!!!!!!!
     event.preventDefault();
-
     const newCardObject = {
-        // using a global variable inside a function is questionable
+    // using a global variable inside a function is questionable
         id: moviesDiv.children.length + 1,
-        title: document.querySelector("#title").value,
         imgSrc: document.querySelector("#image").value,
-        imgAlt: document.querySelector("#title").value,
-        description: document.querySelector("#description").value
+        title: document.querySelector("#title").value,
+        genre: document.querySelector("#genre").value,
+        rating: document.querySelector("#rating").value,
+        summary: document.querySelector("#summary").value
     }
 
     // Add the new elements to the page
     document.querySelector("#movies").appendChild(generateCard(newCardObject));
     addCardButton.click();
 });
-
 
 
 function handleEditButtonClick(event){
@@ -113,10 +120,10 @@ function handleEditButtonClick(event){
     const id = cardToEdit.dataset.id;
     const title = cardToEdit.querySelector("h2").innerText;
     const image = cardToEdit.querySelector("img").getAttribute("src");
-    const description = cardToEdit.querySelector("p").innerText;
+    const summary = cardToEdit.querySelector("p").innerText;
     editCardForm[1].value = title;
     editCardForm[2].value = image;
-    editCardForm[3].value = description;
+    editCardForm[3].value = summary;
     editCardForm[4].value = id;
 }
 window.addEventListener('click', event => {

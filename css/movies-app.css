@@ -113,10 +113,35 @@ fieldset textarea {
     max-height: 38%;
 }
 
+.movie h2 {
+    margin-top: auto;
+    padding: 0 10px;
+    font-size: 30px;
+}
+
 .movie p {
     margin-top: auto;
     padding: 0 10px;
+    font-size: 20px;
 }
+
+.genre {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.rating {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.summary {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
 
 button {
     background-color: #464040;

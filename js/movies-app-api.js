@@ -1,6 +1,9 @@
+import * as movie from "./movies-app-main.js";
+
+
 "use strict";
 
-import * as modalLecture from "./movies-app-main.js";
+
 
 //BONUS API
 // export async function getMoviePoster(movie) {
@@ -24,38 +27,6 @@ import * as modalLecture from "./movies-app-main.js";
 //         console.log(data);
 //     })
 
-
-
-//Make an AJAX request to get a listing of all the movies
-// export function getMoviesAndCreateCards (movie) {
-//     fetch("http://localhost:3000/movies")
-//         .then(data => {
-//            return data.json();
-//         })
-//         .then(movie => {
-//             // createMovieList(movie.list);
-//             console.log(movie);
-//         })
-//
-// }
-
-// export function getMoviesAndCreateCards (movies) {
-//     fetch("http://localhost:3000/movies")
-//         .then(data => {
-//             return data.json();
-//         })
-//         .then(movies => {
-//             // createMovieList(movie.list);
-//             movies.forEach((movie, index) => {
-//                 const movieTitle = movie.title;
-//                 const movieGenre = movie.genre;
-//                 const movieRating = movie.rating;
-//                 const movieSummary = movie.movieSummary;
-//                 console.log(movieGenre);
-//             })
-//         })
-// }
-// getMoviesAndCreateCards();
 
 
 //just attempting to create function that will show OMDB movielists
