@@ -4,18 +4,21 @@
 // function moviesLoop () {
 //     getMoviesAndCreateCards()
 // }
+let movies = [];
 
-function getMoviesAndCreateCards (movies) {
+function getMoviesAndCreateCards () {
     fetch("http://localhost:3000/movies")
         .then(data => {
             return data.json();
         })
-        .then(movies => {
-            loopingThroughMovies(movies);
+        .then(movieData => {
+            movies = movieData;
+            console.log(movies);
+            loopingThroughMovies();
         })
 }
 
-function loopingThroughMovies(movies) {
+function loopingThroughMovies() {
     // let moviesDiv = document.querySelector("#movies")
     movies.forEach((movie, index) => {
         // createMovieCards(movie);
@@ -108,8 +111,9 @@ addCardSubmitButton.addEventListener('click', event => {
 
 
 function handleEditButtonClick(event){
-
-    const cardToEdit = event.target.parentElement;
+    const cardToEdit = this.parentElement;
+    // console.log(this.parentElement);
+    // console.log(cardToEdit);
 
     const modalWrapper = document.querySelector("#editCardModalWrapper");
     modalWrapper.classList.remove("hideModal");
@@ -118,11 +122,28 @@ function handleEditButtonClick(event){
     const editCardForm = document.querySelector("#editCardForm");
 
     const id = cardToEdit.dataset.id;
-    const title = cardToEdit.querySelector("h2").innerText;
-    const image = cardToEdit.querySelector("img").getAttribute("src");
-    const genre = cardToEdit.querySelector("p").innerText;
-    const rating = cardToEdit.querySelector("p").innerText;
-    const summary = cardToEdit.querySelector("p").innerText;
+
+    console.log(id);
+
+    let movie = undefined;
+    console.log(movies);
+    for (let i = 0; i < movies.length; i++) {
+        console.log(`${movies[i].id} == ${id}`);
+        if(movies[i].id == id) {
+            movie = movies[i];
+        }
+    }
+    if(!movie) {
+        console.error("Cannot find movie with id " + id);
+    }
+
+    console.log(movie);
+
+    const title = movie.title;
+    const image = movie.posterURL;
+    const genre = movie.genre;
+    const rating = movie.rating;
+    const summary = movie.movieSummary;
     editCardForm[1].value = title;
     editCardForm[2].value = image;
     editCardForm[3].value = genre;
@@ -130,7 +151,7 @@ function handleEditButtonClick(event){
     editCardForm[5].value = summary;
     editCardForm[6].value = id;
 }
-console.log(handleEditButtonClick());
+// console.log(handleEditButtonClick());
 
 
 window.addEventListener('click', event => {
@@ -160,10 +181,17 @@ editCardSubmitButton.addEventListener('click', event => {
     const cardToEdit = document.querySelector(`[data-id="${cardId}"]`);
     cardToEdit.querySelector("h2").innerText = newTitle;
     cardToEdit.querySelector("img").setAttribute("src", newImageLink);
-    cardToEdit.querySelector("p").innerText = newGenre;
-    cardToEdit.querySelector("p").innerText = newRating;
-    cardToEdit.querySelector("p").innerText = newDescription;
+    cardToEdit.querySelector("p").innerText = "Genre: " + newGenre;
+    cardToEdit.querySelector("p:nth-of-type(2)").innerText = newRating;
+    cardToEdit.querySelector("p:nth-of-type(3)").innerText = newDescription;
     document.querySelector("#editCardModalWrapper").click();
+
+    // make a movie from the form data
+
+    // overwrite that movie in the movies array
+
+    // redisplay the movie cards
+
 });
 
 function handleRemoveButtonClick (event) {
