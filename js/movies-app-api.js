@@ -47,10 +47,10 @@ import * as modalLecture from "./movies-app-main.js";
 //         .then(movies => {
 //             // createMovieList(movie.list);
 //             movies.forEach((movie, index) => {
-//                 // const movieTitle = movie.title;
+//                 const movieTitle = movie.title;
 //                 const movieGenre = movie.genre;
-//                 // const movieRating = movie.rating;
-//                 // const movieSummary = movie.movieSummary;
+//                 const movieRating = movie.rating;
+//                 const movieSummary = movie.movieSummary;
 //                 console.log(movieGenre);
 //             })
 //         })
