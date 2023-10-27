@@ -167,7 +167,7 @@ removeButtons.forEach(removeButton => {
     removeButton.addEventListener('click', handleRemoveButtonClick);
 });
 
-moviesList.forEach(movie => moviesDiv.appendChild(generateCard(movies)));
+moviesList.forEach(movies => moviesDiv.appendChild(generateCard(movies)));
 
 
 //Display a "loading..." message
