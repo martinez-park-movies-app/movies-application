@@ -64,6 +64,7 @@
     {
       "title": "The Shining",
       "rating": 5,
+      "genre": "Horror",
       "movieSummary": "Jack Nicholson hitting his peak.",
       "posterURL": "https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
       "id": 10

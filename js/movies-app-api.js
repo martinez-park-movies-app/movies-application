@@ -39,23 +39,42 @@ import * as modalLecture from "./movies-app-main.js";
 //
 // }
 
-export function getMoviesAndCreateCards (movies) {
-    fetch("http://localhost:3000/movies")
-        .then(data => {
-            return data.json();
-        })
-        .then(movies => {
-            // createMovieList(movie.list);
-        movies.forEach((movie, index) => {
-            // const movieTitle = movie.title;
-            // const movieGenre = movie.genre;
-            // const movieRating = movie.rating;
-            // const movieSummary = movie.movieSummary;
-            // console.log(movieGenre);
-            })
-        })
+// export function getMoviesAndCreateCards (movies) {
+//     fetch("http://localhost:3000/movies")
+//         .then(data => {
+//             return data.json();
+//         })
+//         .then(movies => {
+//             // createMovieList(movie.list);
+//             movies.forEach((movie, index) => {
+//                 // const movieTitle = movie.title;
+//                 const movieGenre = movie.genre;
+//                 // const movieRating = movie.rating;
+//                 // const movieSummary = movie.movieSummary;
+//                 console.log(movieGenre);
+//             })
+//         })
+// }
+// getMoviesAndCreateCards();
 
-}
- const movieTitle = getMoviesAndCreateCards(movie.title);
-console.log(movieTitle);
+
+//just attempting to create function that will show OMDB movielists
+
+// const IMGPATH = `http://img.omdbapi.com/?apikey=${OMDB_API_KEY}&`;
+// async function getMovies(searchTerm) {
+//     const APIURL = `https://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=${OMDB_API_KEY}`;
+//     const resp = await fetch(APIURL);
+//     const respData = await resp.json();
+//     console.log(respData.Search);
+
+    // respData.forEach(movie => {
+    //     console.log(movie);
+     //    const img = document.createElement('img');
+     //    img.src = IMGPATH + movie.Poster;
+     //
+     //    document.body.appendChild(img);
+     // });
+//     return movie;
+// }
+// getMovies("Superman");
 
