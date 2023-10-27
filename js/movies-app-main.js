@@ -24,23 +24,23 @@ function loopingThroughMovies(movies) {
     })
     // console.log(movies);
 }
-function createMovieCards(movies, index) {
-    const movieTitle = movie.title;
-    const movieGenre = movie.genre;
-    const movieRating = movie.rating;
-    const movieSummary = movie.movieSummary;
-    console.log(movieTitle);
-}
+// function createMovieCards(movies, index) {
+//     const movieTitle = movie.title;
+//     const movieGenre = movie.genre;
+//     const movieRating = movie.rating;
+//     const movieSummary = movie.movieSummary;
+//     console.log(movieTitle);
+// }
 getMoviesAndCreateCards();
 function generateCard(movie){
     const newCard = document.createElement("div");
     newCard.classList.add('movie');
     newCard.dataset.id = movie.id;
 
-    const newCardImgEl = document.createElement("img");
-    newCardImgEl.src = movie.imgSrc;
-    newCardImgEl.alt = movie.imgAlt;
-    newCard.appendChild(newCardImgEl);
+    const moviePoster = document.createElement("img");
+    moviePoster.src = movie.posterURL;
+    moviePoster.alt = movie.imgAlt;
+    newCard.appendChild(moviePoster);
 
     const movieTitle = document.createElement("h2");
     movieTitle.innerHTML = movie.title;
@@ -120,12 +120,19 @@ function handleEditButtonClick(event){
     const id = cardToEdit.dataset.id;
     const title = cardToEdit.querySelector("h2").innerText;
     const image = cardToEdit.querySelector("img").getAttribute("src");
+    const genre = cardToEdit.querySelector("p").innerText;
+    const rating = cardToEdit.querySelector("p").innerText;
     const summary = cardToEdit.querySelector("p").innerText;
     editCardForm[1].value = title;
     editCardForm[2].value = image;
-    editCardForm[3].value = summary;
-    editCardForm[4].value = id;
+    editCardForm[3].value = genre;
+    editCardForm[4].value = rating;
+    editCardForm[5].value = summary;
+    editCardForm[6].value = id;
 }
+console.log(handleEditButtonClick());
+
+
 window.addEventListener('click', event => {
     const modalWrapper = document.querySelector("#editCardModalWrapper");
     if (event.target === document.querySelector("#editCardModalWrapper")){
@@ -147,10 +154,14 @@ editCardSubmitButton.addEventListener('click', event => {
     const cardId = document.querySelector("#editCardId").value;
     const newTitle = document.querySelector("#editCardTitle").value;
     const newImageLink = document.querySelector("#editImageLink").value;
-    const newDescription = document.querySelector("#editImageDescription").value;
+    const newDescription = document.querySelector("#editSummary").value;
+    const newGenre = document.querySelector("#editGenre").value;
+    const newRating = document.querySelector("#editRating").value;
     const cardToEdit = document.querySelector(`[data-id="${cardId}"]`);
     cardToEdit.querySelector("h2").innerText = newTitle;
     cardToEdit.querySelector("img").setAttribute("src", newImageLink);
+    cardToEdit.querySelector("p").innerText = newGenre;
+    cardToEdit.querySelector("p").innerText = newRating;
     cardToEdit.querySelector("p").innerText = newDescription;
     document.querySelector("#editCardModalWrapper").click();
 });

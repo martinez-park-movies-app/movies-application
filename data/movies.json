@@ -29,11 +29,12 @@
       "posterURL": "https://m.media-amazon.com/images/M/MV5BN2M2ZmU2OGQtNmU5Yi00MTIyLTgwNWMtYjljMzZlYTdiNjBhXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
     },
     {
+      "id": 5,
       "title": "Fletch",
       "rating": 4,
       "genre": "Comedy",
       "movieSummary": "Irwin M. \"Fletch\" Fletcher is a newspaper reporter being offered a large sum to off a cancerous millionaire, but is on the run, risking his job and finding clues when it's clear the man is healthy.",
-      "id": 5
+      "posterURL": "https://upload.wikimedia.org/wikipedia/en/3/3e/Fletchmovieposter.jpg"
     },
     {
       "id": 6,
