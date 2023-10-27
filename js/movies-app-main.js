@@ -5,42 +5,33 @@
 //     getMoviesAndCreateCards()
 // }
 
-const moviesList =
-    [
-    {
-        id: 1,
-        title: "Fly Eagles Fly",
-        imgSrc: "img/philly.eagles.png",
-        imgAlt: "Philadelphia Eagles logo",
-        description: "Go Birds! Need I say more."
-    },
-    {
-        id: 2,
-        title: "San Antonio",
-        imgSrc: "img/spurs.png",
-        imgAlt: "The San Antonio Spurs",
-        description: "The San Antonio Spurs are the greatest basketball dynasty."
-    },
-    {
-        id: 3,
-        title: "Bruce Lee",
-        imgSrc: "img/bruce.lee.png",
-        imgAlt: "Bruce Lee",
-        description: "The greatest Martial Artist of all time!"
-    },
-    {
-        id: 4,
-        title: "The Goat",
-        imgSrc: "img/cr7.png",
-        imgAlt: "Cristiano Ronaldo",
-        description: "Legend has it, even actual Goats refer to him as the G.O.A.T."
 
-    }
-];
-
-
-
-
+function getMoviesAndCreateCards (movies) {
+    fetch("http://localhost:3000/movies")
+        .then(data => {
+            return data.json();
+        })
+        .then(movies => {
+            loopingThroughMovies(movies);
+        })
+}
+function loopingThroughMovies(movies) {
+    // let moviesDiv = document.querySelector("#movies")
+    movies.forEach((movie, index) => {
+        // createMovieCards(movie);
+        let card = generateCard(movie);
+        moviesDiv.appendChild(card);
+    })
+    // console.log(movies);
+}
+function createMovieCards(movies, index) {
+    const movieTitle = movie.title;
+    const movieGenre = movie.genre;
+    const movieRating = movie.rating;
+    const movieSummary = movie.movieSummary;
+    console.log(movieTitle);
+}
+getMoviesAndCreateCards();
 function generateCard(movieObject){
     const newCard = document.createElement("div");
     newCard.classList.add('movie');
@@ -167,7 +158,7 @@ removeButtons.forEach(removeButton => {
     removeButton.addEventListener('click', handleRemoveButtonClick);
 });
 
-moviesList.forEach(movies => moviesDiv.appendChild(generateCard(movies)));
+// moviesList.forEach(movies => moviesDiv.appendChild(generateCard(movies)));
 
 
 //Display a "loading..." message
