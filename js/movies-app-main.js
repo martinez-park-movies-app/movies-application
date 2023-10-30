@@ -33,6 +33,7 @@ function loopingThroughMovies() {
 //     console.log(movieTitle);
 // }
 getMoviesAndCreateCards();
+
 function generateCard(movie){
     const newCard = document.createElement("div");
     newCard.classList.add('movie');

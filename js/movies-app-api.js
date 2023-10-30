@@ -15,10 +15,12 @@ import * as movie from "./movies-app-main.js";
 //             return movie.Poster
 //         })
 // }
-
+//
 // getMoviePoster({title:"shrek"});
 
-//ORIGINAL FETCH
+
+
+// ORIGINAL FETCH
 // fetch ("http://localhost:3000/movies")
 //     .then( response => {
 //         return response.json();
@@ -28,24 +30,4 @@ import * as movie from "./movies-app-main.js";
 //     })
 
 
-
-//just attempting to create function that will show OMDB movielists
-
-// const IMGPATH = `http://img.omdbapi.com/?apikey=${OMDB_API_KEY}&`;
-// async function getMovies(searchTerm) {
-//     const APIURL = `https://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=${OMDB_API_KEY}`;
-//     const resp = await fetch(APIURL);
-//     const respData = await resp.json();
-//     console.log(respData.Search);
-
-    // respData.forEach(movie => {
-    //     console.log(movie);
-     //    const img = document.createElement('img');
-     //    img.src = IMGPATH + movie.Poster;
-     //
-     //    document.body.appendChild(img);
-     // });
-//     return movie;
-// }
-// getMovies("Superman");
 
