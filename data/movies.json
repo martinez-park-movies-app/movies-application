@@ -57,8 +57,8 @@
     {
       "title": "Fellowship of the Ring",
       "rating": 3,
-      "genre": "fantasy",
-      "movieSummary": "way too long but Aragorn's pretty cool!",
+      "genre": "Fantasy",
+      "movieSummary": "Way too long but Aragorn's pretty cool!",
       "id": 9,
       "posterURL": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"
     },
@@ -73,8 +73,8 @@
     {
       "title": "The Two Towers",
       "rating": 3,
-      "genre": "fantasy",
-      "movieSummary": "eh, ok. soundtrack is good.",
+      "genre": "Fantasy",
+      "movieSummary": "Eh, ok. soundtrack is good.",
       "posterURL": "https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
       "id": 11
     }
